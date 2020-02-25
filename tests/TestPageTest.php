@@ -10,9 +10,6 @@ class TestPageTest extends TestCase
     /** @var TestPage|Page|null */
     private $page;
 
-    /** @var bool */
-    private $needsRollback;
-
     /** @var array */
     private $rollback;
 
