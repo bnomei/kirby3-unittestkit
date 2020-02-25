@@ -1,0 +1,8 @@
+title: Test Page
+preset: page
+fields:
+  text:
+    label: Text
+    type: textarea
+    size: large
+

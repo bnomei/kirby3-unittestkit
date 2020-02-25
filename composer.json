@@ -1,27 +1,56 @@
 {
-    "name": "getkirby/plainkit",
-    "description": "Kirby Plainkit",
-    "type": "project",
-    "keywords": ["kirby", "cms", "starterkit"],
-    "homepage": "https://getkirby.com",
-    "authors": [
-        {
-            "name": "Bastian Allgeier",
-            "email": "bastian@getkirby.com",
-            "homepage": "https://getkirby.com"
-        }
-    ],
-    "support": {
-        "email": "support@getkirby.com",
-        "issues": "https://github.com/getkirby/starterkit/issues",
-        "forum": "https://forum.getkirby.com",
-        "source": "https://github.com/getkirby/starterkit"
-    },
-    "require": {
-        "php": ">=7.1.0",
-        "getkirby/cms": "^3.0"
-    },
-    "config": {
-        "optimize-autoloader": true
+  "name": "bnomei/kirby3-unittestkit",
+  "description": "Kirby Unittestkit",
+  "type": "project",
+  "version": "1.0.0",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Bruno Meilick",
+      "email": "b@bnomei.com"
     }
+  ],
+  "keywords": [
+    "kirby3",
+    "kirby3-cms",
+    "example",
+    "demo",
+    "php",
+    "unittest",
+    "phpunit",
+    "composer"
+  ],
+  "config": {
+    "optimize-autoloader": true,
+    "sort-packages": true
+  },
+  "require": {
+    "php": ">=7.2.0",
+    "getkirby/cms": "^3.3"
+  },
+  "require-dev": {
+    "nunomaduro/phpinsights": "^1.8",
+    "phpstan/phpstan": "^0.12.11",
+    "phpunit/phpunit": "^8.3"
+  },
+  "autoload": {
+    "psr-4": {
+      "": "site/models"
+    }
+  },
+  "scripts": {
+    "fix": "php-cs-fixer fix",
+    "analyze": "phpstan analyse",
+    "insights": "./vendor/bin/phpinsights -v",
+    "test": [
+      "mkdir -p tests/logs",
+      "phpunit --configuration ./phpunit.xml"
+    ],
+    "dist": [
+      "composer install --no-dev"
+    ],
+    "dev": [
+      "composer update"
+    ]
+  }
 }

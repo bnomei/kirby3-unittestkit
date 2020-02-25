@@ -1,6 +1,12 @@
 <?php
 
-include '../vendor/autoload.php';
+// bootstrap will make all classes even from plugins available for testing
+
+// NOTE: same as /public/index.php but...
+// -> and realpath
+// -> no "echo"
+
+include realpath(__DIR__ . '/../') . '/vendor/autoload.php';
 
 $kirby = new Kirby([
     'roots' => [
@@ -16,4 +22,4 @@ $kirby = new Kirby([
     ]
 ]);
 
-echo $kirby->render();
+// echo $kirby->render();

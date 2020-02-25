@@ -41,3 +41,7 @@ Icon
 # https://getkirby.com/docs/cookbook/setup/composer#starting-a-new-project
 /kirby
 /vendor
+.idea
+*.cache
+/tests/logs/
+/public/media/
