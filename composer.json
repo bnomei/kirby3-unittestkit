@@ -18,6 +18,8 @@
     "php",
     "unittest",
     "phpunit",
+    "phpstan",
+    "phpinsights",
     "composer"
   ],
   "config": {
