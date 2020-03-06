@@ -1,4 +1,4 @@
-# Kirby 3 Unittestkit
+# Kirby 3 UnitTest-Kit
 
 Examples how to unittest:
 
