@@ -14,8 +14,9 @@
         </testsuite>
     </testsuites>
     <filter>
-        <whitelist>
+        <whitelist processUncoveredFilesFromWhitelist="true">
             <directory suffix=".php">./site/models</directory>
+            <!-- <directory suffix=".php">./site/plugins/*/tests</directory> -->
         </whitelist>
     </filter>
     <php>
