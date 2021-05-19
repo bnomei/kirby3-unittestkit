@@ -6,16 +6,16 @@ $finder = PhpCsFixer\Finder::create()
     ->exclude('kirby')
     ->exclude('node_modules')
     ->exclude('public')
-    ->exclude('site/plugins')
+    //->exclude('site/plugins')
     ->exclude('src')
-    ->exclude('vendor')
     ->exclude('storage')
+    ->exclude('vendor')
     ->in(__DIR__)
 ;
 
-return PhpCsFixer\Config::create()
+return (new PhpCsFixer\Config())
     ->setRules([
         '@PSR2' => true,
     ])
     ->setFinder($finder)
-;
+    ;

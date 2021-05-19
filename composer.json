@@ -27,13 +27,13 @@
     "sort-packages": true
   },
   "require": {
-    "php": ">=7.2.0",
-    "getkirby/cms": "^3.3"
+    "php": ">=7.3.0",
+    "getkirby/cms": "^3.5"
   },
   "require-dev": {
-    "nunomaduro/phpinsights": "^1.8",
+    "nunomaduro/phpinsights": "^1.14",
     "phpstan/phpstan": "^0.12.11",
-    "phpunit/phpunit": "^8.3"
+    "phpunit/phpunit": "^9.5"
   },
   "autoload": {
     "psr-4": {
@@ -46,6 +46,7 @@
     "insights": "./vendor/bin/phpinsights -v",
     "test": [
       "mkdir -p tests/logs",
+      "@putenv XDEBUG_MODE=coverage",
       "phpunit --configuration ./phpunit.xml"
     ],
     "dist": [
